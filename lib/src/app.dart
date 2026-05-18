@@ -1,8 +1,8 @@
 import 'package:calculadora2026/src/ui/views/home/home_page.dart';
 import 'package:flutter/material.dart';
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class CalculadorApp extends StatelessWidget {
+  const CalculadorApp({super.key});
 
   @override
   Widget build(BuildContext context) {
