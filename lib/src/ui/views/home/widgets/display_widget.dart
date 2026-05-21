@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Display extends StatelessWidget {
-  const Display({super.key});
+  final TextEditingController controller;
+  const Display({super.key, required this.controller});
 
   @override
   Widget build(BuildContext context) {
@@ -9,6 +10,7 @@ class Display extends StatelessWidget {
       // Define o espaçamento interno do widget
       padding: const EdgeInsets.all(8.0),
       child: TextField(
+        controller: controller,
         //Ajustando a fonte
         style: TextStyle(fontSize: 20, color: Colors.white),
         //Quantidade de Linhas
