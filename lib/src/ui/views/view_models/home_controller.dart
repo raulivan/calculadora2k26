@@ -53,12 +53,30 @@ class HomeController{
     _ehSegundoOperador = true;
   }
 
-  void clear() {
+  void onPressedLimpar() {
     displayController.text = '0';
     _primeiroOperando = '';
     _segundoOperando = '';
     _operacao = '';
     _ehSegundoOperador = false;
   }
+
+  
+
+  void onPressedApagar(){
+
+    if (displayController.text.isNotEmpty) {
+      final ultimoCaracter = displayController.text.substring(displayController.text.length - 1);
+      if (["+", "-", "x", "/"].contains(ultimoCaracter)) {
+        _operacao = "";
+        _segundoOperando = "";
+        _ehSegundoOperador = false;
+      }
+
+      displayController.text = displayController.text.substring(0, displayController.text.length - 1);
+    }
+  }
+
+
 
 }

@@ -12,7 +12,7 @@ class Display extends StatelessWidget {
       child: TextField(
         controller: controller,
         //Ajustando a fonte
-        style: TextStyle(fontSize: 20, color: Colors.white),
+        style: TextStyle(fontSize: 40, color: Colors.white),
         //Quantidade de Linhas
         maxLines: 3,
         minLines: 3,
