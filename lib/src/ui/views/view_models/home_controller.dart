@@ -44,6 +44,9 @@ class HomeController{
       case '/':
         result = segundoOperandoDouble != 0 ? primeiroOperandoDouble / segundoOperandoDouble : 0.0;
         break;
+      case '%':
+        result =  (primeiroOperandoDouble * segundoOperandoDouble) / 100;
+        break;
     }
 
     displayController.text = result.toString();

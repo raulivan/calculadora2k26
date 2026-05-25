@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 class Botao extends StatelessWidget {
   final String texto;
   final  void Function()? onPressed;
-  const Botao({super.key, required this.texto, this.onPressed});
+  final double width;
+  final Color? backgroundColor;
+  const Botao({super.key, required this.texto, this.onPressed,this.backgroundColor, this.width = 60});
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +17,9 @@ class Botao extends StatelessWidget {
         // Aparência do botão
         style: FilledButton.styleFrom(
           // Define a cor de fundo do botão
-          backgroundColor: const Color.fromARGB(255, 54, 54, 54),
+          backgroundColor: backgroundColor ?? const Color.fromARGB(255, 54, 54, 54),
           // Define o tamanho fixo do botão
-          fixedSize: Size(60, 60),
+          fixedSize: Size(width, 60),
           // Define a forma do botão
           shape: RoundedRectangleBorder(
             // Define cantos arredondados para o botão
@@ -25,7 +27,9 @@ class Botao extends StatelessWidget {
           ),
         ),
         // Personaliza a aparecia do texto do botão
-        child: Text(texto, style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold)),
+        child: Text(texto, 
+        style: TextStyle(fontSize: 20,
+        fontWeight: FontWeight.bold)),
       ),
     );
   }

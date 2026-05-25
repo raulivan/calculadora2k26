@@ -35,9 +35,9 @@ class _HomePageState extends State<HomePage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Botao(texto: "<", onPressed: () => _controller.onPressedApagar()),
-              Botao(texto: "C", onPressed: ()=> _controller.onPressedLimpar()),
-              Botao(texto: "%", onPressed: () {}),
+              Botao(texto: "<", backgroundColor: Colors.grey, onPressed: () => _controller.onPressedApagar()),
+              Botao(texto: "C", backgroundColor: Colors.grey,onPressed: ()=> _controller.onPressedLimpar()),
+              Botao(texto: "%", backgroundColor: Colors.grey, onPressed: () => _controller.onPressedOperacao("%")),
               BotaoOperacao(texto: "/", onPressed:() => _controller.onPressedOperacao("/")),
             ],
           ),
@@ -71,8 +71,7 @@ class _HomePageState extends State<HomePage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Botao(texto: "+-", onPressed: () {}),
-              Botao(texto: "0", onPressed: () => _controller.onPressedDigitos("0")),
+              Botao(width: 170, texto: "0", onPressed: () => _controller.onPressedDigitos("0")),
               Botao(texto: ",", onPressed: () => _controller.onPressedDigitos(".")),
               BotaoOperacao(texto: "=", onPressed: () => _controller.onPressedCacular()),
             ],
