@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class HomeController{
+class HomeViewModel {
   // Controlador do Diplay
   final  displayController = TextEditingController(text: "0");
   String _primeiroOperando = "";
